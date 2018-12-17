@@ -1,0 +1,13 @@
+<ul>
+<li> <%= link_to 'add project', new_product_path %></li>
+</ul>
+
+<% @products.each do |product| %>
+  <%# if current_user.id == product.id %>
+  <%= link_to product.name, product_path(product) %>
+  <%# product.name %>
+  <p>Description: <%= product.description %></p>
+  <p>Price: <%= product.price %></p>
+  <img src="<%= product.image_url %>" alt="">
+  <p>------------</p>
+<% end %>

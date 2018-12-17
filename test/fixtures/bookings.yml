@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  product_id: 1
+  renter_id: 1
+  rent_id: 1
+  start_id: 2018-12-17
+  end_date: 2018-12-17
+  total_price: 1.5
+
+two:
+  product_id: 1
+  renter_id: 1
+  rent_id: 1
+  start_id: 2018-12-17
+  end_date: 2018-12-17
+  total_price: 1.5

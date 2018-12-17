@@ -1,0 +1,23 @@
+<%= form_for @product do |f| %>
+  <div class="field">
+    <%= f.label :Product_Name %>:
+    <%= f.text_field :name, autofocus: true %>
+  </div>
+
+    <div class="field">
+    <%= f.label :Description %>:
+    <%= f.text_field :description, autofocus: true %>
+  </div>
+  <div class="field">
+    <%= f.label :Price %>:
+    <%= f.text_field :price, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image %>:
+    <%= f.text_field :image_url, autofocus: true %>
+  </div>
+    <%# <%= f.hidden_field , autofocus: true , hidden_field_tag current_user.id, params[:user_id] %>
+    
+<div><%= f.submit %></div>
+<% end %>
