@@ -1,0 +1,7 @@
+<% @bookings.each do |booking| %>
+<% if booking.renter_id == current_user.id %>
+  <div>
+  name:<%= booking.rent_id %>
+  </div>
+  <% end %>
+<% end %>

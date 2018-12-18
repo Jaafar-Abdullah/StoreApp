@@ -13,9 +13,9 @@
     <%= f.text_field :price, autofocus: true %>
   </div>
 
-  <div class="field">
-    <%= f.label :image %>:
-    <%= f.text_field :image_url, autofocus: true %>
+  <div>
+  <%= f.label :image %>
+  <%= f.file_field :image_url %>
   </div>
     <%# <%= f.hidden_field , autofocus: true , hidden_field_tag current_user.id, params[:user_id] %>
     

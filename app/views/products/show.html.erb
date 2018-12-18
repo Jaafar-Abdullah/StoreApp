@@ -8,6 +8,5 @@
     <%= link_to 'Delete', edit_product_path %>
 <% else %> 
     <%= link_to 'Buy', "/products/#{@product.id}/buy",method: :get  %>
-    <%= link_to 'Rent', "/products/#{@product.id}/rent",method: :get  %>
-    <%#link_to 'rent',    %>
+    <%= link_to 'Rent', booking_path  %>
 <% end %>

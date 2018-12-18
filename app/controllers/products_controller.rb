@@ -27,6 +27,7 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
+    session[:id] = @product.id
   end
   
 

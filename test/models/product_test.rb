@@ -10,6 +10,7 @@
 #  image_url   :string
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  is_sale     :boolean          default(FALSE)
 #
 
 require 'test_helper'

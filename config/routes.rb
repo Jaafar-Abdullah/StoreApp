@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+  
   devise_for :users
   resources 'pages'
+  resources 'bookings'
   resources 'products'
   root "pages#home"
   get "/products/:id/buy", to: "pages#buy"
