@@ -11,8 +11,11 @@
     <a href=""><%= link_to 'Edit', edit_product_path %>
     <a href=""><%= link_to 'Delete', edit_product_path %>
 <% else %> 
-    <a href=""><%= link_to 'Buy', "/products/#{@product.id}/buy",method: :get  , class:"btn btn-primary"%>
-    <a href=""><%= link_to 'Rent', booking_path  , class:"btn btn-primary"%>
+  <form action=<%= "/products/#{@product.id}/buy" %> id="buy-form" method="GET">
+    <button class="btn btn-primary" id="btn-form">Buy</button>
+    <%= link_to 'Rent', booking_path  , class:"btn btn-primary"%>
+  </form>
+    
 <% end %>
   </div>
 </div>
@@ -29,3 +32,19 @@
     </div>
     <% end %>
 
+<script>
+  var btn = document.querySelector("#btn-form");
+  btn.addEventListener("click", function(e){
+    e.preventDefault();
+    swal({
+      text: "Total Price: <%= @product.price %>",
+      buttons: {
+        cancel: true,
+        confirm: true
+      }
+    }).then(function() {
+      var form = document.querySelector("form");
+      form.submit();
+    })
+  });
+</script>
