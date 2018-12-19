@@ -1,0 +1,9 @@
+<%= form_for @comments do |f| %>
+  <%= f.hidden_field :user_id, :value => current_user.id %>
+  <%= f.hidden_field :product_id, :value => @product.id %>
+  <div class="field">
+    <%= f.label :body, 'Write your comment', class: "span-2" %>
+    <%= f.text_area :body, class: "span-2" %>
+  </div>
+  <%= f.submit "Send", class: "submit" , class:"btn btn-primary" %>
+<% end %>

@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   def new
     @product = Product.new 
   end
@@ -27,7 +28,7 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
-    session[:id] = @product.id
+    @comments = Comment.new
   end
   
 

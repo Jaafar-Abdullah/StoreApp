@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   def home
     @products = Product.all
   end
@@ -18,6 +19,14 @@ end
     # @product.update(is_rent: true)
     # @product.save
   end
+def user_item
+@products = Product.where("user_id=#{current_user.id}")
+end
+
+def dashboard
+@history_of_sale = Sale.where(buyer_id: current_user.id)
+@history_of_rent = Booking.where(renter_id: current_user.id)
+end
  
   
 end

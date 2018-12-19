@@ -1,4 +1,5 @@
 class BookingsController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   def new
     
   end
@@ -6,7 +7,6 @@ class BookingsController < ApplicationController
   def show
     @product = Product.find_by(id: params[:id])
     @booking = Booking.new
-    
   end
 
   def create
@@ -15,6 +15,7 @@ class BookingsController < ApplicationController
     @booking.rent_id = @booking.product.user_id
     total_price = (@booking.end_date - @booking.start_id)
     @booking.total_price = total_price * @booking.product.price
+    @booking.product.update(is_rent: true)
     # raise
     @booking.save
     redirect_to bookings_path

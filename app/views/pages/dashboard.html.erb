@@ -1,0 +1,14 @@
+
+<h3>Order History: </h3>
+<ul>
+<% @history_of_sale.each do |s| %>
+  <li> <%= link_to s.product.name, product_path(s.product) %></li>
+<% end %>
+</ul>
+
+<h3>Rented History: </h3>
+<ul>
+<% @history_of_rent.each do |r| %>
+  <li> <%= link_to r.product.name, product_path(r.product) %></li>
+<% end %>
+</ul>

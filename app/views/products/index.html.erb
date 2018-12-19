@@ -1,10 +1,32 @@
+
+
+
+
+<div class="container" >
+    <div class="row">
 <% @products.each do |product| %>
-<% if current_user.id == product.user_id %>
-    
-  <%= link_to product.name, product_path(product) %>
-  <p>Description: <%= product.description %>Î</p>
-  <p>Price: <%= product.price %>Î</p>
-  <p>------------</p>
-<% end %>
+<% if current_user.id != product.user_id  && product.is_sale == false && product.is_rent == false %>
+
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid6">
+                <div class="product-image6">
+                    <a href="#">
+                      <img src="<%= product.image_url %>" alt="">
+                    </a>
+                </div>
+              <div class="product-content">
+                    <h3 class="title"><%= link_to product.name, product_path(product) %></h3>
+                    <div class="price">Price: <%= product.price %></div>
+                </div>
+                <ul class="social">
+                    <li><%= link_to "View", product_path(product) %></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+
 
 <% end %>
+<% end %>
+    </div>
+</div>
