@@ -1,5 +1,5 @@
+# before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 class PagesController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   def home
     @products = Product.all
   end

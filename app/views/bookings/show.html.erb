@@ -2,3 +2,23 @@
 <h2>Price: <%= @product.price %></h2>
 <%= render partial: 'form' %>
 
+<script>
+  var btn = document.querySelector(".swal-form-submit");
+  btn.addEventListener("click", function(e){
+    e.preventDefault();
+    var start_date = document.querySelector(".start").value;;
+    var end_date = document.querySelector(".end").value;
+    var day = (new Date(end_date).getDate() - new Date(start_date).getDate()) * <%= @product.price %>;
+    console.log()
+    swal({
+      text:`Total Price: ${day }`,
+      buttons: {
+        cancel: true,
+        confirm: true
+      }
+    }).then(function() {
+      var form = document.querySelector("form");
+      form.submit();
+    })
+  });
+</script>

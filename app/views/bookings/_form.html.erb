@@ -1,16 +1,14 @@
-<%= form_for @booking do |f| %>
+<%= form_for @booking, class: "swal-form" do |f| %>
   <div class="field">
     <%= f.label :start_date %> 
-    <%= f.date_field :start_id %>
+    <%= f.date_field :start_id ,class:"start"%>
   </div>
   <div class="field">
     <%= f.label :end_date %> 
-    <%= f.date_field :end_date %>
+    <%= f.date_field :end_date, class:"end" %>
   </div>
   <%= hidden_field_tag "booking[product_id]", @product.id %>
 
-
-  
-<div><%= f.submit class: "submit" , value: "Rent"%></div>
+<div><%= f.submit class: "submit swal-form-submit" , value: "Rent"%></div>
 <% end %>
 

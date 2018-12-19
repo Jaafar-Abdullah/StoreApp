@@ -1,14 +1,46 @@
 
 <h3>Order History: </h3>
-<ul>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Product Name</th>
+      <th scope="col">Price</th>
+    </tr>
+  </thead>
 <% @history_of_sale.each do |s| %>
-  <li> <%= link_to s.product.name, product_path(s.product) %></li>
+   <%# link_to s.product.name, product_path(s.product) %>
+   <tbody>
+    <tr>
+      <th scope="row"><%= s.product.id %></th>
+      <td><%= s.product.name %></td>
+      <td><%= s.product.price %></td>
+    </tr>
+  </tbody>
 <% end %>
-</ul>
+</table>
+
+
+<hr>
+
 
 <h3>Rented History: </h3>
-<ul>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Product Name</th>
+      <th scope="col">Price</th>
+    </tr>
+  </thead>
 <% @history_of_rent.each do |r| %>
-  <li> <%= link_to r.product.name, product_path(r.product) %></li>
-<% end %>
-</ul>
+  <%# link_to r.product.name, product_path(r.product) %>
+  <tbody>
+    <tr>
+      <th scope="row"><%= r.product.id %></th>
+      <td><%= r.product.name %></td>
+      <td><%= r.total_price %></td>
+    </tr>
+  </tbody>
+  <% end %>
+</table>
