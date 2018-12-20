@@ -11,7 +11,7 @@
 
 ## Approach Taken:
 
-- Create 4 Models with association
+- Create 5 Models with association
   - user (devise)
   - Product
   - Booking
