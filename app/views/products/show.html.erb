@@ -28,9 +28,9 @@
         <p>BY <strong><%= comment.user.name %>: </strong><%= comment.body %> </p>
       <% end %>
         <hr>
-        <% if current_user.id == @product.sale.buyer_id || current_user.id == @product.sale.seller_id %>
+        
         <%= render partial: 'comments/form' %>
-        <% end %>
+
     </div>
     <% end %>
 

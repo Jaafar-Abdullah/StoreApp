@@ -1,24 +1,34 @@
-# README
+```# Project-04: Travel Itinerary
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Explanation of the technologies:
 
-Things you may want to cover:
+- Ruby on Rails
+- Bootstrap
+- SwatAlert
+- JavaScript
+- css
+-
 
-* Ruby version
+## Approach Taken:
 
-* System dependencies
+- Create 4 Models with association
+  - user (devise)
+  - Product
+  - Booking
+  - Sale
+  - comment
 
-* Configuration
+## Unsolved Problems
 
-* Database creation
+- Add a category and tag to the App
 
-* Database initialization
+## What's next:
 
-* How to run the test suite
+- Work more on CSS
+- add more feature to the web
+## Credits:
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- [Jack Jeffress ](https://github.com/ga-wolf)
+- [Moath Althawad](https://github.com/mfalthaw/)
+- All The Oryx class
+```
