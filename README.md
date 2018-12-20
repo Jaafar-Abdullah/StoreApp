@@ -20,7 +20,7 @@
 
 ## Unsolved Problems
 
-- Add a category and tag to the App
+- Add a category and tag model to the App
 
 ## What's next:
 
